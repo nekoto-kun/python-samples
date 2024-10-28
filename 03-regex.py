@@ -1,0 +1,32 @@
+import re
+
+def analyze_log_file(filename):
+    suspicious_activity = []
+    with open(filename, 'r') as f:
+        for line in f:
+            # Regex pattern to match suspicious activity
+            pattern = r"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) - - \[.*\] \"[A-Z]+\s+\/[^\s]+\s+HTTP\/\d\.\d\" \d{3} \d+"
+
+            match = re.search(pattern, line)
+            if match:
+                ip_address = match.group(1)
+
+                # Add additional checks for suspicious activity, e.g.,
+                if ip_address in ["192.168.1.100", "10.0.0.1"]:  # Known internal IPs
+                    continue
+
+                # Check for failed login attempts
+                if "xmlrpc" in line:
+                    suspicious_activity.append(line)
+
+    return suspicious_activity
+
+log_file = "samples/access.log"
+suspicious_logs = analyze_log_file(log_file)
+
+if suspicious_logs:
+    print("Suspicious activity found:")
+    for log in suspicious_logs:
+        print(log)
+else:
+    print("No suspicious activity detected.")
