@@ -1,6 +1,6 @@
 import re
 
-def analyze_log_file(filename):
+def analyze_log_file(filename, search):
     suspicious_activity = []
     with open(filename, 'r') as f:
         for line in f:
@@ -16,13 +16,17 @@ def analyze_log_file(filename):
                     continue
 
                 # Check for failed login attempts
-                if "xmlrpc" in line:
+                if search in line:
                     suspicious_activity.append(line)
 
     return suspicious_activity
 
 log_file = "samples/access.log"
-suspicious_logs = analyze_log_file(log_file)
+
+# Ask what to find in the logs
+search = input("Enter a search term: ")
+
+suspicious_logs = analyze_log_file(log_file, search)
 
 if suspicious_logs:
     print("Suspicious activity found:")
