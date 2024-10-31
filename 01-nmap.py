@@ -2,8 +2,8 @@ import nmap
 
 scanner = nmap.PortScanner()
 
-# Define target IP address or hostname
-target = "scanme.nmap.org"
+# Define target IP address or hostname, ask the user
+target = input("Enter a target IP address or hostname: ")
 
 # Run a basic scan on the target
 scanner.scan(target)
