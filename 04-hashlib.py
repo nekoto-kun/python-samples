@@ -11,6 +11,6 @@ def crack_password(hash_value, wordlist):
                 return
     print("Password not found")
 
-hash_value = "b8e38c8499121373b25139a9e4316807a2b85359f8e2363b3a005a54334a45dc"
+hash_value = "4b7ef7e5b888084daa83b8da109754671006793e01fb55bce607528affcde3e7"
 wordlist = "samples/rockyou.txt"
 crack_password(hash_value, wordlist)
