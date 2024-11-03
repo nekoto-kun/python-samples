@@ -12,6 +12,7 @@ The examples in this repository are for educational purposes only. The author is
 2. Create a virtual environment using `python -m venv venv`
 3. Activate the virtual environment using `source venv/bin/activate` (Linux) or `venv\Scripts\activate` (Windows)
 4. Install the required packages using `pip install -r requirements.txt`
+5. Run the examples using `python <example>.py`. For notebooks, open the notebook using Jupyter Notebook, Jupyter Lab, Google Colab, or any other notebook viewer like VS Code. Choose the appropriate kernel if needed.
 
 ## About `samples` directory
 
@@ -19,3 +20,5 @@ The `samples` directory is used for storing resources that are used in the examp
 
 1. `samples/rockyou.txt`: A text file containing a list of common passwords.
 2. `samples/user.sqlite`: An SQLite database file containing a table named `users` with columns `id`, `username`, and `password`.
+3. `samples/access.log`: A text file containing Nginx access logs.
+4. `samples/victim`: A directory containing files that are used for demonstrating encryption and decryption examples.
