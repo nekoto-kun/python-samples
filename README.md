@@ -16,9 +16,6 @@ The examples in this repository are for educational purposes only. The author is
 
 ## About `samples` directory
 
-The `samples` directory is used for storing resources that are used in the examples. The resources are referenced in the examples using relative paths. Due to big file sizes, some resources are not included in the repository. Here is the list of resources that are not included in the repository:
+The `samples` directory is used for storing resources that are used in the examples. The resources are referenced in the examples using relative paths. I have provided them with `samples.7z` file and you can extract it using 7-Zip or any other archive manager.
 
-1. `samples/rockyou.txt`: A text file containing a list of common passwords.
-2. `samples/user.sqlite`: An SQLite database file containing a table named `users` with columns `id`, `username`, and `password`.
-3. `samples/access.log`: A text file containing Nginx access logs.
-4. `samples/victim`: A directory containing files that are used for demonstrating encryption and decryption examples.
+Please note that there are some files that are not included in the `samples` directory due to privacy concerns. You can create your own files or use the examples with your own files.
